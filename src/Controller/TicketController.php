@@ -2,21 +2,21 @@
 
 namespace App\Controller;
 
+use App\Entity\User;
 use App\Entity\Ticket;
 use App\Form\TicketType;
 use App\Repository\TicketRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 /**
- * @Route("/ticket")
  */
 class TicketController extends Controller
 {
     /**
-     * @Route("/", name="ticket_index", methods="GET")
+     * @Route("/admin/ticket/", name="ticket_index", methods="GET")
      */
     public function index(TicketRepository $ticketRepository): Response
     {
@@ -24,12 +24,41 @@ class TicketController extends Controller
     }
 
     /**
-     * @Route("/new", name="ticket_new", methods="GET|POST")
+     * @Route("/admin/ticket/new", name="ticket_new", methods="GET|POST")
      */
     public function new(Request $request): Response
     {
+        
+        $em = $this->getDoctrine()->getManager();
+        // $em = $this->getEntityManager();
+        $repoU = $em->getRepository(User::class);
+        $users = $repoU->findAll();
+
+        // $userChoices = array();
+        // foreach($users as $u){
+        //     // TODO
+        // }
+
+        // $choices = ['choices' => $users];
+        
+        $choice_labels = function($user, $key, $value) {
+            /** @var User $user */
+            return strtoupper($user->getEmail());
+        };
+
+        $choices_pref = function($user, $key, $value) {
+            return $user->getId() == $this->getUser()->getId();
+        };
+
+        $choices = ['choices' => [ 
+            'choices' => $users, 
+            'choice_label' => $choice_labels, 
+            'preferred_choices' => $choices_pref 
+        ]];
+        
+        // dump($choices); // DEBUG
         $ticket = new Ticket();
-        $form = $this->createForm(TicketType::class, $ticket);
+        $form = $this->createForm(TicketType::class, $ticket, $choices);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -47,7 +76,7 @@ class TicketController extends Controller
     }
 
     /**
-     * @Route("/{id}", name="ticket_show", methods="GET")
+     * @Route("/ticket/{id}", name="ticket_show", methods="GET")
      */
     public function show(Ticket $ticket): Response
     {
@@ -55,7 +84,7 @@ class TicketController extends Controller
     }
 
     /**
-     * @Route("/{id}/edit", name="ticket_edit", methods="GET|POST")
+     * @Route("/admin/ticket/{id}/edit", name="ticket_edit", methods="GET|POST")
      */
     public function edit(Request $request, Ticket $ticket): Response
     {
@@ -75,7 +104,7 @@ class TicketController extends Controller
     }
 
     /**
-     * @Route("/{id}", name="ticket_delete", methods="DELETE")
+     * @Route("/admin/ticket/{id}", name="ticket_delete", methods="DELETE")
      */
     public function delete(Request $request, Ticket $ticket): Response
     {

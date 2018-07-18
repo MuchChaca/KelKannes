@@ -5,7 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1"/>
         <title>
             {% block title %}
-                {% if title is defined %}{{title}}{% else %}Title{% endif %} | Nom du site
+                KelKannes | {% if title is defined %} - {{title}}{% else %}Title{% endif %}
             {% endblock %}
         </title>
         {% block stylesheets %}
@@ -14,7 +14,8 @@
             {# custom #}
             <link rel="stylesheet" href="{{ asset('assets/css/styles.css') }}">
         {% endblock %}
-        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+        {# <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" /> #}
+        <link rel="icon" type="image/x-icon" href="{{ asset('assets/images/ico_kanne.png') }}" />
     </head>
     <body>
     <body id="{% block body_id %}{% endblock %}">
@@ -22,7 +23,7 @@
         {% block header %}
             <header id="header" class="bck1 border-bottom">
                 <div class="container">
-                    <h1>KelKannes{% if title is defined %} - {{title}}{% else %}Header{% endif %}</h1>
+                    <h1><img src="{{ asset('assets/images/ico_kanne.png') }}" width="44px" /> KelKannes{% if title is defined %} - {{title}}{% else %}{% endif %} <img src="{{ asset('assets/images/ico_kanne.png') }}" width="44px" /></h1>
                 </div>
             </header>
         {% endblock %}
