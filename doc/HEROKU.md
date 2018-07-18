@@ -37,7 +37,7 @@ heroku local up-build
 Command | Description
 --------|------------
 ``heroku ps`` | Check scaling status.
-``heroku ps:scale web1`` | This will scale the app ``web`` with 1 dyno allocated to it (can sleep).
+``heroku ps:scale web=1`` | This will scale the app ``web`` with 1 dyno allocated to it (can sleep).
 ``heroku ps:scale web=0`` | By removing all dynos allocated to an pp, it will be deactivated.
 
 
