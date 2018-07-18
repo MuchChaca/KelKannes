@@ -1,16 +1,3 @@
-<<<<<<< HEAD
-# Files and directories created by pub
-.dart_tool
-.packages
-.pub/
-build/
-# Remove the following pattern if you wish to check in your lock file
-pubspec.lock
-# Directory created by dartdoc
-doc/api/
-# See https://github.com/dart-lang/site-webdev/issues/1351
-test/**/*.g.dart
-=======
 ###> symfony/framework-bundle ###
 /.env
 /public/bundles/
@@ -25,5 +12,4 @@ test/**/*.g.dart
 ###> symfony/web-server-bundle ###
 /.web-server-pid
 ###< symfony/web-server-bundle ###
->>>>>>> bd49edd5281f48a4fef7e143bbd3de9c7decbbc5
 /node_modules/
