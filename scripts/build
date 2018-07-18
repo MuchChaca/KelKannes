@@ -1,0 +1,14 @@
+#!/usr/bin/env php
+
+<?php
+// Database creation
+echo PHP_EOL . 'Creating database ...' . PHP_EOL;
+$output = shell_exec('php bin/console doctrine:database:create');
+echo $output;
+
+// Database schema update
+echo PHP_EOL . 'Updating database schema ...' . PHP_EOL;
+$output = shell_exec('php bin/console doctrine:schema:update --force');
+echo $output;
+
+?>

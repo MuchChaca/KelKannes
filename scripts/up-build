@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+
+<?php
+
+// BUILD:
+$output = shell_exec('php scripts/build');
+echo $output;
+
+
+$output = shell_exec('php scripts/up');
+echo $output;
+?>
