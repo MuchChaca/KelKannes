@@ -1,0 +1,9 @@
+#!/usr/bin/env php
+<?php
+
+// Start it
+echo PHP_EOL . 'Openning ...' . PHP_EOL;
+$output = shell_exec('$BROWSER doc/build/index.html &');
+echo $output;
+
+?>

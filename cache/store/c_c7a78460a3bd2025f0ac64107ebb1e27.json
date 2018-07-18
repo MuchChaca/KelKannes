@@ -1,0 +1,53 @@
+{
+    "name": "App\\Controller\\MemberController",
+    "line": 9,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "Route": [
+            [
+                "(\"\/member\")"
+            ]
+        ]
+    },
+    "namespace": "App\\Controller",
+    "file": "src\/Controller\/MemberController.php",
+    "relative_file": null,
+    "hash": "9bf1ca50e64f8dbb9e5c7fbec3cac9bce1b81eb1",
+    "parent": "Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Controller": "Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller",
+        "Route": "Symfony\\Component\\Routing\\Annotation\\Route"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "index": {
+            "name": "index",
+            "line": 14,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "Route": [
+                    [
+                        "(\"\/\")"
+                    ]
+                ]
+            },
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

@@ -6,10 +6,10 @@
             <tr>
                 <th>Id</th>
                 <th>Email</th>
-                <th>Password</th>
-                <th>IsActive</th>
+                <th>Mot de passe</th>
+                <th>Actif</th>
                 <th>Roles</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -21,18 +21,18 @@
                 <td>{{ user.isActive ? 'Yes' : 'No' }}</td>
                 <td>{{ user.roles ? user.roles|join(', ') : '' }}</td>
                 <td>
-                    <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
-                    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+                    <a href="{{ path('user_show', {'id': user.id}) }}"><i class="fa fa-info-circle green"></i> Détails</a><br>
+                    <a href="{{ path('user_edit', {'id': user.id}) }}"><i class="fa fa-edit green"></i> Modifier</a>
                 </td>
             </tr>
         {% else %}
             <tr>
-                <td colspan="6">no records found</td>
+                <td colspan="6">Aucun utilisateur</td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <a href="{{ path('user_new') }}">Create new</a>
+    <a href="{{ path('user_new') }}"><button class="btn btn-success btn-back">Nouvel utilisateur</button></a>
 {% endblock %}
 

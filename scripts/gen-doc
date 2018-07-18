@@ -1,0 +1,10 @@
+#!/usr/bin/env php
+
+<?php
+// Doc generation
+echo PHP_EOL . 'Generating documentation ...' . PHP_EOL;
+$output = shell_exec('php sami.phar update config/sami.php -v');
+echo $output;
+
+
+?>

@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping\Table;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -41,8 +43,26 @@ class User implements UserInterface, \Serializable
      */
     private $roles;
 
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Ticket", mappedBy="coupeur")
+     */
+    private $ticketsAsCoupeur;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Ticket", mappedBy="chargeur")
+     */
+    private $ticketsAsChargeur;
+
+    /**
+     * @ORM\OneToMany(targetEntity="App\Entity\Ticket", mappedBy="chauffeur")
+     */
+    private $ticketsAsChauffeur;
+
     public function __construct() {
         $this->isActive = true;
+        $this->ticketsAsCoupeur = new ArrayCollection();
+        $this->ticketsAsChargeur = new ArrayCollection();
+        $this->ticketsAsChauffeur = new ArrayCollection();
         // may not be needed, see section on salt below
         // $this->salt = md5(uniqid('', true));
     }
@@ -134,5 +154,98 @@ class User implements UserInterface, \Serializable
 
     function setIsActive($isActive) {
         $this->isActive = $isActive;
+    }
+
+    /**
+     * @return Collection|Ticket[]
+     */
+    public function getTicketsAsCoupeur(): Collection
+    {
+        return $this->ticketsAsCoupeur;
+    }
+
+    public function addTicketsAsCoupeur(Ticket $ticketsAsCoupeur): self
+    {
+        if (!$this->ticketsAsCoupeur->contains($ticketsAsCoupeur)) {
+            $this->ticketsAsCoupeur[] = $ticketsAsCoupeur;
+            $ticketsAsCoupeur->setCoupeur($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTicketsAsCoupeur(Ticket $ticketsAsCoupeur): self
+    {
+        if ($this->ticketsAsCoupeur->contains($ticketsAsCoupeur)) {
+            $this->ticketsAsCoupeur->removeElement($ticketsAsCoupeur);
+            // set the owning side to null (unless already changed)
+            if ($ticketsAsCoupeur->getCoupeur() === $this) {
+                $ticketsAsCoupeur->setCoupeur(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Ticket[]
+     */
+    public function getTicketsAsChargeur(): Collection
+    {
+        return $this->ticketsAsChargeur;
+    }
+
+    public function addTicketsAsChargeur(Ticket $ticketsAsChargeur): self
+    {
+        if (!$this->ticketsAsChargeur->contains($ticketsAsChargeur)) {
+            $this->ticketsAsChargeur[] = $ticketsAsChargeur;
+            $ticketsAsChargeur->setChargeur($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTicketsAsChargeur(Ticket $ticketsAsChargeur): self
+    {
+        if ($this->ticketsAsChargeur->contains($ticketsAsChargeur)) {
+            $this->ticketsAsChargeur->removeElement($ticketsAsChargeur);
+            // set the owning side to null (unless already changed)
+            if ($ticketsAsChargeur->getChargeur() === $this) {
+                $ticketsAsChargeur->setChargeur(null);
+            }
+        }
+
+        return $this;
+    }
+
+    /**
+     * @return Collection|Ticket[]
+     */
+    public function getTicketsAsChauffeur(): Collection
+    {
+        return $this->ticketsAsChauffeur;
+    }
+
+    public function addTicketsAsChauffeur(Ticket $ticketsAsChauffeur): self
+    {
+        if (!$this->ticketsAsChauffeur->contains($ticketsAsChauffeur)) {
+            $this->ticketsAsChauffeur[] = $ticketsAsChauffeur;
+            $ticketsAsChauffeur->setChauffeur($this);
+        }
+
+        return $this;
+    }
+
+    public function removeTicketsAsChauffeur(Ticket $ticketsAsChauffeur): self
+    {
+        if ($this->ticketsAsChauffeur->contains($ticketsAsChauffeur)) {
+            $this->ticketsAsChauffeur->removeElement($ticketsAsChauffeur);
+            // set the owning side to null (unless already changed)
+            if ($ticketsAsChauffeur->getChauffeur() === $this) {
+                $ticketsAsChauffeur->setChauffeur(null);
+            }
+        }
+
+        return $this;
     }
 }
