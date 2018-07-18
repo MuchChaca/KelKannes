@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}KelKannes | Mes tickets{% endblock %}
+
+{% block body %}
+    <h3>Mes tickets</h3>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Numéro</th>
+                <th>Date de dépôt</th>
+                <th>Poids</th>
+                <th>Unité</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for ticket in tickets %}
+            <tr>
+                <td>{{ ticket.id }}</td>
+                <td>{{ ticket.numero }}</td>
+                <td>{{ ticket.dateDepot ? ticket.dateDepot|date('Y-m-d H:i:s') : '' }}</td>
+                <td>{{ ticket.weight }}</td>
+                <td>{{ ticket.unit }}</td>
+                <td>
+                    <a href="{{ path('ticket_show', {'id': ticket.id}) }}"><i class="fa fa-info-circle green"></i> Détails</a><br>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a href="{{ path('ticket_edit', {'id': ticket.id}) }}"><i class="fa fa-edit green"></i> Modifier</a>
+                    {% endif %}
+                </td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="6">no records found</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('ticket_new') }}"><button class="btn btn-success btn-save">Nouveau ticket</button></a>
+    {% endif %}
+{% endblock %}
