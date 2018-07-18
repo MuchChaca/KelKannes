@@ -1,4 +1,4 @@
-web: scripts/up-build
+web: vendor/bin/heroku-php-nginx
 up: scripts/up
 build: scripts/build
 up-build: scripts/up-build
