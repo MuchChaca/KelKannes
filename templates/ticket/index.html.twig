@@ -1,19 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ticket index{% endblock %}
+{% block title %}KelKannes | Mes tickets{% endblock %}
 
 {% block body %}
-    <h1>Ticket index</h1>
+    <h3>Mes tickets</h3>
 
     <table class="table">
         <thead>
             <tr>
                 <th>Id</th>
-                <th>Numero</th>
-                <th>Date_depot</th>
-                <th>Weight</th>
-                <th>Unit</th>
-                <th>actions</th>
+                <th>Numéro</th>
+                <th>Date de dépôt</th>
+                <th>Poids</th>
+                <th>Unité</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -25,8 +25,10 @@
                 <td>{{ ticket.weight }}</td>
                 <td>{{ ticket.unit }}</td>
                 <td>
-                    <a href="{{ path('ticket_show', {'id': ticket.id}) }}">show</a>
-                    <a href="{{ path('ticket_edit', {'id': ticket.id}) }}">edit</a>
+                    <a href="{{ path('ticket_show', {'id': ticket.id}) }}"><i class="fa fa-info-circle green"></i> Détails</a><br>
+                    {% if is_granted('ROLE_ADMIN') %}
+                        <a href="{{ path('ticket_edit', {'id': ticket.id}) }}"><i class="fa fa-edit green"></i> Modifier</a>
+                    {% endif %}
                 </td>
             </tr>
         {% else %}
@@ -36,6 +38,7 @@
         {% endfor %}
         </tbody>
     </table>
-
-    <a href="{{ path('ticket_new') }}">Create new</a>
+    {% if is_granted('ROLE_ADMIN') %}
+        <a href="{{ path('ticket_new') }}"><button class="btn btn-success btn-save">Nouveau ticket</button></a>
+    {% endif %}
 {% endblock %}
