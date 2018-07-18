@@ -1,0 +1,53 @@
+{
+    "name": "App\\Controller\\Admin\\HomepageController",
+    "line": 11,
+    "short_desc": "",
+    "long_desc": "",
+    "hint": null,
+    "tags": {
+        "Route": [
+            [
+                "(\"\/admin\")"
+            ]
+        ]
+    },
+    "namespace": "App\\Controller\\Admin",
+    "file": "src\/Controller\/Admin\/HomepageController.php",
+    "relative_file": null,
+    "hash": "2f785f854364c581b5e24d40d1a7384ae958bd18",
+    "parent": "Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller",
+    "modifiers": 0,
+    "is_trait": false,
+    "is_interface": false,
+    "aliases": {
+        "Controller": "Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller",
+        "Route": "Symfony\\Component\\Routing\\Annotation\\Route"
+    },
+    "errors": [],
+    "interfaces": [],
+    "traits": [],
+    "properties": [],
+    "methods": {
+        "index": {
+            "name": "index",
+            "line": 16,
+            "short_desc": "",
+            "long_desc": "",
+            "hint": null,
+            "hint_desc": null,
+            "tags": {
+                "Route": [
+                    [
+                        "(\"\/\")"
+                    ]
+                ]
+            },
+            "modifiers": 1,
+            "is_by_ref": "",
+            "exceptions": [],
+            "errors": [],
+            "parameters": []
+        }
+    },
+    "constants": []
+}

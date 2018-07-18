@@ -128,6 +128,10 @@ $all = $repository->findAll();
 Inspired by: [link](https://numa-bord.com/miniblog/symfony-4-les-base-dune-gestion-des-utilisateurs-inscription-connexion-droits-dacces/)
 
 
+## PHPDoc generator - Sami
+* [:link: packagist link](https://packagist.org/packages/sami/sami)
+
+
 ------------------------------
 
 composer require symfony/orm-pack
