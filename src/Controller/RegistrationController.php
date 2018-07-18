@@ -9,10 +9,17 @@ use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 
+/**
+ * Controller for member registration
+ */
 class RegistrationController extends Controller {
 
 	 /**
+	  * Action controller for member registration
+	  *
 	  * @Route("/register")
+	  *
+	  * @return void
 	  */
 	 public function registerAction(Request $request, UserPasswordEncoderInterface $passwordEncoder) {
 		  // 1) build the form
