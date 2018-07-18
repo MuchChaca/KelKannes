@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Files and directories created by pub
 .dart_tool
 .packages
@@ -9,3 +10,19 @@ pubspec.lock
 doc/api/
 # See https://github.com/dart-lang/site-webdev/issues/1351
 test/**/*.g.dart
+=======
+###> symfony/framework-bundle ###
+/.env
+/public/bundles/
+/var/
+/vendor/
+###< symfony/framework-bundle ###
+###> symfony/phpunit-bridge ###
+.phpunit
+/phpunit.xml
+###< symfony/phpunit-bridge ###
+
+###> symfony/web-server-bundle ###
+/.web-server-pid
+###< symfony/web-server-bundle ###
+>>>>>>> bd49edd5281f48a4fef7e143bbd3de9c7decbbc5

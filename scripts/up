@@ -1,0 +1,7 @@
+#!/usr/bin/env php
+
+<?php
+echo PHP_EOL . 'Starting server ...' . PHP_EOL;
+$output = shell_exec('php bin/console server:run');
+echo $output;
+?>
