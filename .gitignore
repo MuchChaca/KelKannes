@@ -26,3 +26,4 @@ test/**/*.g.dart
 /.web-server-pid
 ###< symfony/web-server-bundle ###
 >>>>>>> bd49edd5281f48a4fef7e143bbd3de9c7decbbc5
+/node_modules/
