@@ -1,4 +1,4 @@
-web: vendor/bin/heroku-php-nginx public/build/
+web: vendor/bin/heroku-php-apache2 public/
 up: scripts/up
 build: scripts/build
 up-build: scripts/up-build
