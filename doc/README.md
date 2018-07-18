@@ -27,6 +27,8 @@
 	- [1.14. Login system](#114-login-system)
 	- [1.15. PHPDoc generator - Sami](#115-phpdoc-generator---sami)
 	- [1.16. Not obvious dependencies](#116-not-obvious-dependencies)
+	- [[NEW] Unit testing](#new-unit-testing)
+		- [Installation](#installation)
 
 <!-- /TOC -->
 
@@ -179,3 +181,11 @@ Strongly inspired by: [link](https://numa-bord.com/miniblog/symfony-4-les-base-d
 * composer require symfony/maker-bundle --dev
 * composer require symfony/asset
 * composer require symfony/maker-bundle --dev
+
+
+## [NEW] Unit testing
+### Installation
+```bash
+$ composer require --dev symfony/phpunit-bridge
+```
+
