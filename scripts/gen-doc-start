@@ -1,0 +1,12 @@
+#!/usr/bin/env php
+
+<?php
+
+// Doc generation
+$output = shell_exec('php scripts/gen-doc');
+echo $output;
+
+
+$output = shell_exec('php scripts/doc-start');
+echo $output;
+?>
