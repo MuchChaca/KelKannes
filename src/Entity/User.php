@@ -2,11 +2,13 @@
 
 namespace App\Entity;
 
+use Doctrine\ORM\Mapping\Table;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Security\Core\User\UserInterface;
 
 /**
  * @ORM\Entity(repositoryClass="App\Repository\UserRepository")
+ * @Table(name="users")
  */
 class User implements UserInterface, \Serializable
 {
@@ -26,6 +28,8 @@ class User implements UserInterface, \Serializable
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $password;
+
+    private $plainPassword;
 
     /**
      * @ORM\Column(type="boolean", nullable=true)

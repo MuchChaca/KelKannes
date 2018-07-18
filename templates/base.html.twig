@@ -18,7 +18,7 @@
     </head>
     <body>
     <body id="{% block body_id %}{% endblock %}">
-
+        <!-- HEADER -->
         {% block header %}
             <header id="header" class="bck1 border-bottom">
                 <div class="container">
@@ -61,6 +61,7 @@
             </nav>
         {% endblock %}
 
+        <!-- ALERTS -->
         {% block flash %}
             {% for flash_message in app.session.flashbag.get('success') %}
                 <div class="container alert alert-success" role="alert">
@@ -84,15 +85,17 @@
             {% endfor %}
         {% endblock %}
 
-        <div class="container bck1 padded">
+        <div class="container bck1 padded main">
             {% block body %}
             {% endblock %}
         </div>
 
+
+        <!-- FOOTER -->
         {% block footer %}
             <footer id="footer" class="bck1 border-top">
                 <div class="container">
-                    <h4>Footer</h4>
+                    <h4></h4>
                 </div>
             </footer>
         {% endblock %}
