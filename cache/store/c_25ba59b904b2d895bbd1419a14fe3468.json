@@ -8,7 +8,7 @@
     "namespace": "App\\Controller",
     "file": "src\/Controller\/HomepageController.php",
     "relative_file": null,
-    "hash": "a7a9568d7c839c000c5cc304cc597e0f879c8f04",
+    "hash": "551e9e34633495e4688e04c36b41ffd24d717f39",
     "parent": "Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller",
     "modifiers": 0,
     "is_trait": false,
@@ -27,8 +27,8 @@
     "methods": {
         "index": {
             "name": "index",
-            "line": 16,
-            "short_desc": "",
+            "line": 22,
+            "short_desc": "Controller for homepagen displaying tickets for the connected user\nor all tickets if it is ``ADMIN``",
             "long_desc": "",
             "hint": [
                 [
@@ -36,7 +36,7 @@
                     false
                 ]
             ],
-            "hint_desc": null,
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
@@ -52,8 +52,8 @@
             "parameters": {
                 "ticketRepository": {
                     "name": "ticketRepository",
-                    "line": 16,
-                    "short_desc": null,
+                    "line": 22,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -70,8 +70,8 @@
                             "TicketRepository"
                         ],
                         "attributes": {
-                            "startLine": 16,
-                            "endLine": 16
+                            "startLine": 22,
+                            "endLine": 22
                         }
                     },
                     "default": null,

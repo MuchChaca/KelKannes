@@ -1,14 +1,14 @@
 {
     "name": "App\\Controller\\RegistrationController",
-    "line": 12,
-    "short_desc": "",
+    "line": 15,
+    "short_desc": "Controller for member registration",
     "long_desc": "",
     "hint": null,
     "tags": [],
     "namespace": "App\\Controller",
     "file": "src\/Controller\/RegistrationController.php",
     "relative_file": null,
-    "hash": "c5b0be9c2c4b41e265a7d726bc78d8cc02da71fe",
+    "hash": "b4af544f2d8bf96ee22b6722cf9f4ab614fde7c8",
     "parent": "Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller",
     "modifiers": 0,
     "is_trait": false,
@@ -28,11 +28,16 @@
     "methods": {
         "registerAction": {
             "name": "registerAction",
-            "line": 17,
-            "short_desc": "",
+            "line": 24,
+            "short_desc": "Action controller for member registration",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
@@ -47,7 +52,7 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 17,
+                    "line": 24,
                     "short_desc": null,
                     "long_desc": null,
                     "hint": [
@@ -66,8 +71,8 @@
                             "Request"
                         ],
                         "attributes": {
-                            "startLine": 17,
-                            "endLine": 17
+                            "startLine": 24,
+                            "endLine": 24
                         }
                     },
                     "default": null,
@@ -76,7 +81,7 @@
                 },
                 "passwordEncoder": {
                     "name": "passwordEncoder",
-                    "line": 17,
+                    "line": 24,
                     "short_desc": null,
                     "long_desc": null,
                     "hint": [
@@ -97,8 +102,8 @@
                             "UserPasswordEncoderInterface"
                         ],
                         "attributes": {
-                            "startLine": 17,
-                            "endLine": 17
+                            "startLine": 24,
+                            "endLine": 24
                         }
                     },
                     "default": null,

@@ -14,7 +14,7 @@
     "namespace": "App\\Controller",
     "file": "src\/Controller\/MemberController.php",
     "relative_file": null,
-    "hash": "9bf1ca50e64f8dbb9e5c7fbec3cac9bce1b81eb1",
+    "hash": "ada2ff6869983a612d5e94ef8c8cdfc406716edc",
     "parent": "Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller",
     "modifiers": 0,
     "is_trait": false,
@@ -30,11 +30,16 @@
     "methods": {
         "index": {
             "name": "index",
-            "line": 14,
-            "short_desc": "",
+            "line": 20,
+            "short_desc": "Profile for the member\nTODO - array for each month from now, the number of tonnes",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "void",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
