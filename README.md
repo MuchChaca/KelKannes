@@ -1,24 +1,71 @@
-## Setup for Development
+## Table of content
+<!-- TOC -->
 
-Welcome to the example app used in the
-[Setup for Development](https://webdev.dartlang.org/angular/guide/setup) page
-of [Dart for the web](https://webdev.dartlang.org).
+- [Logical flow (advanced)](#logical-flow-advanced)
+- [Accessing the application](#accessing-the-application)
+	- [Sign up](#sign-up)
+	- [Sign in](#sign-in)
+- [Access tickets](#access-tickets)
+- [Admin](#admin)
+	- [Log in](#log-in)
+	- [Admin-only-features](#admin-only-features)
+- [Logout](#logout)
 
-You can run a [hosted copy](https://webdev.dartlang.org/examples/quickstart) of this
-sample. Or run your own copy:
+<!-- /TOC -->
 
-1. Create a local copy of this repo (use the "Clone or download" button above).
-2. Get the dependencies: `pub get`
-3. Get the webdev tool: `pub global activate webdev`
-4. Launch a development server: `webdev serve`
-5. In a browser, open [http://localhost:8080](http://localhost:8080)
+## Logical flow (advanced)
+> This is the most technical section, don't worry if you do not fully understand.
 
----
+:memo: TODO
 
-*Note:* The content of this repository is generated from the
-[Angular docs repository][docs repo] by running the
-[dart-doc-syncer](//github.com/dart-lang/dart-doc-syncer) tool.
-If you find a problem with this sample's code, please open an [issue][].
 
-[docs repo]: //github.com/dart-lang/site-webdev/tree/master/examples/ng/doc/quickstart
-[issue]: //github.com/dart-lang/site-webdev/issues/new?title=[master]%20examples/ng/doc/quickstart
+## Accessing the application
+![signup-signin](https://image.ibb.co/dyzVzJ/singup_signin.gif)
+
+### Sign up
+In order to register, you have to provide two informations:
+1. An email address
+2. A password
+
+:point_right: Careful, the email address will identify you not just as a login, but also as a pseudo.  
+  
+Once you have the success message, you are ready to log in (see next section).  
+
+### Sign in
+To log in you just have to use the email address provided at the resgristration and the password.
+
+If you type the wrong password or email, you will see an error message, just like on the image above.
+
+## Access tickets
+Once you are logged in, you can access all tickets you were involved with (see image bellow).
+
+![tickets-access](https://image.ibb.co/m1pPRy/ticket_visualization.gif)
+
+## Admin
+### Log in
+You do it just like the regular users, but with some special credentials.
+
+![admin-login](https://image.ibb.co/bVcB6y/admin_connect.gif)
+
+
+### Admin-only-features
+
+![admin-features](https://image.ibb.co/eUALzJ/admin_features.gif)
+
+The home page of the admin is the list of all tickets.  
+
+An admin can:
+* Manage users:
+	* Create
+	* Edit
+	* Delete
+* Manage tickets:
+	* Create
+	* Edit
+	* Delete
+
+
+## Logout
+Simple, clic ``Déconnexion``:
+
+![logout](https://image.ibb.co/fyDyKJ/logout.gif)
