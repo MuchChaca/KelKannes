@@ -11,7 +11,7 @@ use Symfony\Component\Security\Http\Authentication\AuthenticationUtils;
 class SecurityController extends Controller {
 
 	/**
-	 * Login action
+	 * Login action, called when a user (anonymous) attempts to log in
 	 *
 	 * @param Request $request
 	 * @param AuthenticationUtils $authenticationUtils

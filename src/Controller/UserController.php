@@ -17,6 +17,11 @@ use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
 class UserController extends Controller
 {
 	/**
+	 * User controller to render all users - restricted to ``ADMIN``
+	 *
+	 * @param UserRepository $userRepository
+	 * @return Response
+	 * 
 	 * @Route("/", name="user_index", methods="GET")
 	 */
 	public function index(UserRepository $userRepository): Response
@@ -25,6 +30,12 @@ class UserController extends Controller
 	}
 
 	/**
+	 * Controller to create a new user
+	 *
+	 * @param Request $request
+	 * @param UserPasswordEncoderInterface $passwordEncoder
+	 * @return Response
+	 * 
 	 * @Route("/new", name="user_new", methods="GET|POST")
 	 */
 	public function new(Request $request, UserPasswordEncoderInterface $passwordEncoder): Response
@@ -51,6 +62,11 @@ class UserController extends Controller
 	}
 
 	/**
+	 * Controller to render a requested user
+	 *
+	 * @param User $user
+	 * @return Response
+	 * 
 	 * @Route("/{id}", name="user_show", methods="GET")
 	 */
 	public function show(User $user): Response
@@ -59,6 +75,12 @@ class UserController extends Controller
 	}
 
 	/**
+	 * Controller to allow user's edition - restricted to ``ADMIN``
+	 *
+	 * @param Request $request
+	 * @param User $user
+	 * @return Response
+	 * 
 	 * @Route("/{id}/edit", name="user_edit", methods="GET|POST")
 	 */
 	public function edit(Request $request, User $user): Response
@@ -79,6 +101,12 @@ class UserController extends Controller
 	}
 
 	/**
+	 * Controller to delete a user - restricted to ``ADMIN``
+	 *
+	 * @param Request $request
+	 * @param User $user
+	 * @return Response
+	 * 
 	 * @Route("/{id}", name="user_delete", methods="DELETE")
 	 */
 	public function delete(Request $request, User $user): Response
