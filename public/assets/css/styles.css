@@ -1,6 +1,9 @@
 /*base*/
-body{background: #ebeff2;}
-.bck1{background: #fff;}
+body{
+	background: #ebeff2;
+	background-image: url(http://exquis.ca/wp-content/uploads/2016/01/rhum_1.jpg);
+}
+.bck1{background: rgba(255, 255, 255, 0.822);}
 
 body a:hover{
 	text-decoration: none;
