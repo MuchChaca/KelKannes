@@ -29,6 +29,7 @@
 	- [1.16. Not obvious dependencies](#116-not-obvious-dependencies)
 	- [[NEW] Unit testing](#new-unit-testing)
 		- [Installation](#installation)
+		- [Helpful Symfony doc](#helpful-symfony-doc)
 
 <!-- /TOC -->
 
@@ -188,4 +189,5 @@ Strongly inspired by: [link](https://numa-bord.com/miniblog/symfony-4-les-base-d
 ```bash
 $ composer require --dev symfony/phpunit-bridge
 ```
-
+### Helpful Symfony doc
+[:link: link](https://symfony.com/doc/current/testing.html)
