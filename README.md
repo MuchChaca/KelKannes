@@ -1,6 +1,7 @@
 ## Table of content
 <!-- TOC -->
 
+- [Table of content](#table-of-content)
 - [Logical flow (advanced)](#logical-flow-advanced)
 - [Accessing the application](#accessing-the-application)
 	- [Sign up](#sign-up)
@@ -16,7 +17,7 @@
 ## Logical flow (advanced)
 > This is the most technical section, don't worry if you do not fully understand.
 
-:memo: TODO
+![models-sitemap](https://image.ibb.co/iUZcDd/sitemap_0_1b.png)
 
 
 ## Accessing the application
