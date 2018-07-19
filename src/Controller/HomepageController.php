@@ -10,9 +10,15 @@ use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
 class HomepageController extends Controller {
 
-	 /**
-	  * @Route("/", name="connected_homepage")
-	  */
+	/**
+	 * Controller for homepagen displaying tickets for the connected user
+	 * or all tickets if it is ``ADMIN``
+	 *
+	 * @param TicketRepository $ticketRepository
+	 * @return Response
+	 * 
+	 * @Route("/", name="connected_homepage")
+	 */
 	 public function index(TicketRepository $ticketRepository) : Response {
 		
 		$tickets = array();

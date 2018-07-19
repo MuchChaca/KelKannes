@@ -8,7 +8,7 @@
     "namespace": "App\\Controller",
     "file": "src\/Controller\/TicketController.php",
     "relative_file": null,
-    "hash": "044908de8bdb4beea73b5dc0776ea890d185368e",
+    "hash": "9f500daadc5515526b0ef186c907a7d9664f93cb",
     "parent": "Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller",
     "modifiers": 0,
     "is_trait": false,
@@ -30,8 +30,8 @@
     "methods": {
         "index": {
             "name": "index",
-            "line": 21,
-            "short_desc": "",
+            "line": 26,
+            "short_desc": "Accessible only for ``ADMIN`` and allow the acess to all tickets",
             "long_desc": "",
             "hint": [
                 [
@@ -39,7 +39,7 @@
                     false
                 ]
             ],
-            "hint_desc": null,
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
@@ -56,8 +56,8 @@
             "parameters": {
                 "ticketRepository": {
                     "name": "ticketRepository",
-                    "line": 21,
-                    "short_desc": null,
+                    "line": 26,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -74,8 +74,8 @@
                             "TicketRepository"
                         ],
                         "attributes": {
-                            "startLine": 21,
-                            "endLine": 21
+                            "startLine": 26,
+                            "endLine": 26
                         }
                     },
                     "default": null,
@@ -86,8 +86,8 @@
         },
         "new": {
             "name": "new",
-            "line": 29,
-            "short_desc": "",
+            "line": 39,
+            "short_desc": "Controller to create a new ticket",
             "long_desc": "",
             "hint": [
                 [
@@ -95,16 +95,8 @@
                     false
                 ]
             ],
-            "hint_desc": null,
-            "tags": {
-                "Route": [
-                    [
-                        "(\"\/admin\/ticket\/new\",",
-                        "name=\"ticket_new\",",
-                        "methods=\"GET|POST\")"
-                    ]
-                ]
-            },
+            "hint_desc": "@Route(\"\/admin\/ticket\/new\", name=\"ticket_new\", methods=\"GET|POST\")",
+            "tags": [],
             "modifiers": 1,
             "is_by_ref": "",
             "exceptions": [],
@@ -112,8 +104,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 29,
-                    "short_desc": null,
+                    "line": 39,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -131,8 +123,8 @@
                             "Request"
                         ],
                         "attributes": {
-                            "startLine": 29,
-                            "endLine": 29
+                            "startLine": 39,
+                            "endLine": 39
                         }
                     },
                     "default": null,
@@ -143,8 +135,8 @@
         },
         "show": {
             "name": "show",
-            "line": 81,
-            "short_desc": "",
+            "line": 96,
+            "short_desc": "Controller to retrieve a single ticket",
             "long_desc": "",
             "hint": [
                 [
@@ -152,7 +144,7 @@
                     false
                 ]
             ],
-            "hint_desc": null,
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
@@ -169,8 +161,8 @@
             "parameters": {
                 "ticket": {
                     "name": "ticket",
-                    "line": 81,
-                    "short_desc": null,
+                    "line": 96,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -187,8 +179,8 @@
                             "Ticket"
                         ],
                         "attributes": {
-                            "startLine": 81,
-                            "endLine": 81
+                            "startLine": 96,
+                            "endLine": 96
                         }
                     },
                     "default": null,
@@ -199,8 +191,8 @@
         },
         "edit": {
             "name": "edit",
-            "line": 89,
-            "short_desc": "",
+            "line": 110,
+            "short_desc": "Controller to edit a ticket",
             "long_desc": "",
             "hint": [
                 [
@@ -208,7 +200,7 @@
                     false
                 ]
             ],
-            "hint_desc": null,
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
@@ -225,8 +217,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 89,
-                    "short_desc": null,
+                    "line": 110,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -244,8 +236,8 @@
                             "Request"
                         ],
                         "attributes": {
-                            "startLine": 89,
-                            "endLine": 89
+                            "startLine": 110,
+                            "endLine": 110
                         }
                     },
                     "default": null,
@@ -254,8 +246,8 @@
                 },
                 "ticket": {
                     "name": "ticket",
-                    "line": 89,
-                    "short_desc": null,
+                    "line": 110,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -272,8 +264,8 @@
                             "Ticket"
                         ],
                         "attributes": {
-                            "startLine": 89,
-                            "endLine": 89
+                            "startLine": 110,
+                            "endLine": 110
                         }
                     },
                     "default": null,
@@ -284,8 +276,8 @@
         },
         "delete": {
             "name": "delete",
-            "line": 109,
-            "short_desc": "",
+            "line": 136,
+            "short_desc": "Controller to delete a ticket",
             "long_desc": "",
             "hint": [
                 [
@@ -293,7 +285,7 @@
                     false
                 ]
             ],
-            "hint_desc": null,
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
@@ -310,8 +302,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 109,
-                    "short_desc": null,
+                    "line": 136,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -329,8 +321,8 @@
                             "Request"
                         ],
                         "attributes": {
-                            "startLine": 109,
-                            "endLine": 109
+                            "startLine": 136,
+                            "endLine": 136
                         }
                     },
                     "default": null,
@@ -339,8 +331,8 @@
                 },
                 "ticket": {
                     "name": "ticket",
-                    "line": 109,
-                    "short_desc": null,
+                    "line": 136,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -357,8 +349,8 @@
                             "Ticket"
                         ],
                         "attributes": {
-                            "startLine": 109,
-                            "endLine": 109
+                            "startLine": 136,
+                            "endLine": 136
                         }
                     },
                     "default": null,

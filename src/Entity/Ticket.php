@@ -5,6 +5,10 @@ namespace App\Entity;
 use Doctrine\ORM\Mapping as ORM;
 
 /**
+ * A ticket has a ``coupeur``, a ``chargeur`` and a ``chauffeur``
+ * 
+ * @uses App\Entity\User
+ * 
  * @ORM\Entity(repositoryClass="App\Repository\TicketRepository")
  */
 class Ticket

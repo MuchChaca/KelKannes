@@ -14,7 +14,7 @@
     "namespace": "App\\Controller",
     "file": "src\/Controller\/UserController.php",
     "relative_file": null,
-    "hash": "64953fa3cb7ff0a81a8747bb821ac6e2a17e3c6e",
+    "hash": "eb040c6ab9a967cc33fe4259d0393cddfe9c4873",
     "parent": "Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller",
     "modifiers": 0,
     "is_trait": false,
@@ -36,8 +36,8 @@
     "methods": {
         "index": {
             "name": "index",
-            "line": 22,
-            "short_desc": "",
+            "line": 27,
+            "short_desc": "User controller to render all users - restricted to ``ADMIN``",
             "long_desc": "",
             "hint": [
                 [
@@ -45,7 +45,7 @@
                     false
                 ]
             ],
-            "hint_desc": null,
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
@@ -62,8 +62,8 @@
             "parameters": {
                 "userRepository": {
                     "name": "userRepository",
-                    "line": 22,
-                    "short_desc": null,
+                    "line": 27,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -80,8 +80,8 @@
                             "UserRepository"
                         ],
                         "attributes": {
-                            "startLine": 22,
-                            "endLine": 22
+                            "startLine": 27,
+                            "endLine": 27
                         }
                     },
                     "default": null,
@@ -92,8 +92,8 @@
         },
         "new": {
             "name": "new",
-            "line": 30,
-            "short_desc": "",
+            "line": 41,
+            "short_desc": "Controller to create a new user",
             "long_desc": "",
             "hint": [
                 [
@@ -101,7 +101,7 @@
                     false
                 ]
             ],
-            "hint_desc": null,
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
@@ -118,8 +118,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 30,
-                    "short_desc": null,
+                    "line": 41,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -137,8 +137,8 @@
                             "Request"
                         ],
                         "attributes": {
-                            "startLine": 30,
-                            "endLine": 30
+                            "startLine": 41,
+                            "endLine": 41
                         }
                     },
                     "default": null,
@@ -147,8 +147,8 @@
                 },
                 "passwordEncoder": {
                     "name": "passwordEncoder",
-                    "line": 30,
-                    "short_desc": null,
+                    "line": 41,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -168,8 +168,8 @@
                             "UserPasswordEncoderInterface"
                         ],
                         "attributes": {
-                            "startLine": 30,
-                            "endLine": 30
+                            "startLine": 41,
+                            "endLine": 41
                         }
                     },
                     "default": null,
@@ -180,8 +180,8 @@
         },
         "show": {
             "name": "show",
-            "line": 56,
-            "short_desc": "",
+            "line": 72,
+            "short_desc": "Controller to render a requested user",
             "long_desc": "",
             "hint": [
                 [
@@ -189,7 +189,7 @@
                     false
                 ]
             ],
-            "hint_desc": null,
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
@@ -206,8 +206,8 @@
             "parameters": {
                 "user": {
                     "name": "user",
-                    "line": 56,
-                    "short_desc": null,
+                    "line": 72,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -224,8 +224,8 @@
                             "User"
                         ],
                         "attributes": {
-                            "startLine": 56,
-                            "endLine": 56
+                            "startLine": 72,
+                            "endLine": 72
                         }
                     },
                     "default": null,
@@ -236,8 +236,8 @@
         },
         "edit": {
             "name": "edit",
-            "line": 64,
-            "short_desc": "",
+            "line": 86,
+            "short_desc": "Controller to allow user's edition - restricted to ``ADMIN``",
             "long_desc": "",
             "hint": [
                 [
@@ -245,7 +245,7 @@
                     false
                 ]
             ],
-            "hint_desc": null,
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
@@ -262,8 +262,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 64,
-                    "short_desc": null,
+                    "line": 86,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -281,8 +281,8 @@
                             "Request"
                         ],
                         "attributes": {
-                            "startLine": 64,
-                            "endLine": 64
+                            "startLine": 86,
+                            "endLine": 86
                         }
                     },
                     "default": null,
@@ -291,8 +291,8 @@
                 },
                 "user": {
                     "name": "user",
-                    "line": 64,
-                    "short_desc": null,
+                    "line": 86,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -309,8 +309,8 @@
                             "User"
                         ],
                         "attributes": {
-                            "startLine": 64,
-                            "endLine": 64
+                            "startLine": 86,
+                            "endLine": 86
                         }
                     },
                     "default": null,
@@ -321,8 +321,8 @@
         },
         "delete": {
             "name": "delete",
-            "line": 84,
-            "short_desc": "",
+            "line": 112,
+            "short_desc": "Controller to delete a user - restricted to ``ADMIN``",
             "long_desc": "",
             "hint": [
                 [
@@ -330,7 +330,7 @@
                     false
                 ]
             ],
-            "hint_desc": null,
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
@@ -347,8 +347,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 84,
-                    "short_desc": null,
+                    "line": 112,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -366,8 +366,8 @@
                             "Request"
                         ],
                         "attributes": {
-                            "startLine": 84,
-                            "endLine": 84
+                            "startLine": 112,
+                            "endLine": 112
                         }
                     },
                     "default": null,
@@ -376,8 +376,8 @@
                 },
                 "user": {
                     "name": "user",
-                    "line": 84,
-                    "short_desc": null,
+                    "line": 112,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -394,8 +394,8 @@
                             "User"
                         ],
                         "attributes": {
-                            "startLine": 84,
-                            "endLine": 84
+                            "startLine": 112,
+                            "endLine": 112
                         }
                     },
                     "default": null,

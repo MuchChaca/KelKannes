@@ -1,6 +1,6 @@
 {
     "name": "App\\Controller\\SecurityController",
-    "line": 10,
+    "line": 11,
     "short_desc": "",
     "long_desc": "",
     "hint": null,
@@ -8,15 +8,16 @@
     "namespace": "App\\Controller",
     "file": "src\/Controller\/SecurityController.php",
     "relative_file": null,
-    "hash": "b0c8228be0216c78b78fd4f4719f1597b0263942",
+    "hash": "ec52cd87cf2a67a27de6e6b398f35ef319d20e3a",
     "parent": "Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller",
     "modifiers": 0,
     "is_trait": false,
     "is_interface": false,
     "aliases": {
-        "Controller": "Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller",
         "Request": "Symfony\\Component\\HttpFoundation\\Request",
+        "Response": "Symfony\\Component\\HttpFoundation\\Response",
         "Route": "Symfony\\Component\\Routing\\Annotation\\Route",
+        "Controller": "Symfony\\Bundle\\FrameworkBundle\\Controller\\Controller",
         "AuthenticationUtils": "Symfony\\Component\\Security\\Http\\Authentication\\AuthenticationUtils"
     },
     "errors": [],
@@ -26,11 +27,16 @@
     "methods": {
         "login": {
             "name": "login",
-            "line": 15,
-            "short_desc": "",
+            "line": 22,
+            "short_desc": "Login action, called when a user (anonymous) attempts to log in",
             "long_desc": "",
-            "hint": null,
-            "hint_desc": null,
+            "hint": [
+                [
+                    "\\Symfony\\Component\\HttpFoundation\\Response",
+                    false
+                ]
+            ],
+            "hint_desc": "",
             "tags": {
                 "Route": [
                     [
@@ -46,8 +52,8 @@
             "parameters": {
                 "request": {
                     "name": "request",
-                    "line": 15,
-                    "short_desc": null,
+                    "line": 22,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -65,8 +71,8 @@
                             "Request"
                         ],
                         "attributes": {
-                            "startLine": 15,
-                            "endLine": 15
+                            "startLine": 22,
+                            "endLine": 22
                         }
                     },
                     "default": null,
@@ -75,8 +81,8 @@
                 },
                 "authenticationUtils": {
                     "name": "authenticationUtils",
-                    "line": 15,
-                    "short_desc": null,
+                    "line": 22,
+                    "short_desc": "",
                     "long_desc": null,
                     "hint": [
                         [
@@ -96,8 +102,8 @@
                             "AuthenticationUtils"
                         ],
                         "attributes": {
-                            "startLine": 15,
-                            "endLine": 15
+                            "startLine": 22,
+                            "endLine": 22
                         }
                     },
                     "default": null,
